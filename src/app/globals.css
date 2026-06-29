@@ -1,1 +1,113 @@
 @import "tailwindcss";
+
+@theme {
+  --color-teal-50: #e6f7f8;
+  --color-teal-100: #cceef0;
+  --color-teal-200: #99dde1;
+  --color-teal-300: #66ccd2;
+  --color-teal-400: #33bbc3;
+  --color-teal-500: #005F73;
+  --color-teal-600: #004c5c;
+  --color-teal-700: #003945;
+  --color-teal-800: #00262e;
+  --color-teal-900: #001317;
+  --color-navy-50: #e6e8ed;
+  --color-navy-100: #ccd1db;
+  --color-navy-200: #99a3b7;
+  --color-navy-300: #667593;
+  --color-navy-400: #33476f;
+  --color-navy-500: #0a1e3d;
+  --color-navy-600: #081831;
+  --color-navy-700: #061225;
+  --color-navy-800: #040c18;
+  --color-navy-900: #02060c;
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulseSoft {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 2s ease-in-out infinite;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
